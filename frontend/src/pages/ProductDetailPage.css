@@ -1,0 +1,89 @@
+.product-detail-page { padding-bottom: 64px; }
+.breadcrumb a { color: var(--text-muted); font-size: 13px; }
+.breadcrumb a:hover { color: var(--accent); }
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  padding: 32px 0;
+  align-items: start;
+}
+
+.detail-image {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+}
+.detail-image img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+.detail-featured-badge {
+  position: absolute;
+  top: 16px; left: 16px;
+  background: var(--gold);
+  color: #7c4a00;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 100px;
+}
+
+.detail-category {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.detail-name {
+  font-size: clamp(20px, 3vw, 30px);
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+.detail-meta {
+  background: var(--surface-2);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.meta-row { display: flex; align-items: center; gap: 16px; font-size: 14px; }
+.meta-label { color: var(--text-muted); font-weight: 600; min-width: 70px; }
+
+.detail-price-box {
+  background: linear-gradient(135deg, rgba(230,57,70,0.04), rgba(230,57,70,0.08));
+  border: 2px solid rgba(230,57,70,0.15);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-bottom: 24px;
+}
+.detail-price-label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.6px; color: var(--text-muted); font-weight: 600; margin-bottom: 4px; }
+.detail-price { font-size: 32px; margin-bottom: 8px; }
+.detail-price-note { font-size: 13px; color: var(--text-muted); }
+
+.detail-description { margin-bottom: 24px; }
+.detail-description h3 { font-size: 16px; margin-bottom: 10px; }
+.detail-description p { color: var(--text-muted); font-size: 15px; line-height: 1.7; }
+
+.detail-contact {
+  background: var(--surface-2);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+}
+.detail-contact h3 { font-size: 16px; margin-bottom: 8px; }
+.detail-contact p { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+.contact-options { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.related-section { margin-top: 64px; }
+.related-section h2 { font-size: 24px; margin-bottom: 24px; }
+
+@media (max-width: 768px) {
+  .detail-grid { grid-template-columns: 1fr; gap: 24px; }
+}

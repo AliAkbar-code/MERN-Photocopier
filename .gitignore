@@ -1,1 +1,12 @@
-Set-Content .gitignore "node_modules`nbackend/store.json`nbackend/uploads/`nfrontend/build/`n.env"
+Get-Content .gitignore
+```
+
+It should show:
+```
+node_modules/
+backend/store.json
+backend/uploads/
+frontend/build/
+frontend/node_modules/
+.env
+*.log

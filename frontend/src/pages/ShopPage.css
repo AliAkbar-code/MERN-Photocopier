@@ -1,0 +1,86 @@
+.shop-header {
+  background: var(--primary);
+  padding: 36px 0 28px;
+  color: white;
+}
+.breadcrumb { font-size: 13px; color: rgba(255,255,255,0.5); margin-bottom: 8px; }
+.breadcrumb a { color: rgba(255,255,255,0.5); }
+.breadcrumb a:hover { color: rgba(255,255,255,0.8); }
+.shop-header h1 { font-size: clamp(22px, 3vw, 32px); color: white; margin-bottom: 6px; }
+.shop-header p { color: rgba(255,255,255,0.55); font-size: 14px; }
+
+.shop-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 32px;
+  padding-top: 32px;
+  padding-bottom: 64px;
+  align-items: start;
+}
+
+.shop-sidebar { position: sticky; top: 100px; }
+
+.filter-section {
+  margin-bottom: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+.filter-section h3 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+.filter-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 9px 10px;
+  background: none;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.15s;
+  text-align: left;
+  font-family: var(--font-body);
+}
+.filter-item:hover { background: var(--surface-2); color: var(--accent); }
+.filter-item.active { background: rgba(230,57,70,0.08); color: var(--accent); font-weight: 600; }
+.filter-item span {
+  background: var(--surface-3);
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 100px;
+}
+.filter-item.active span { background: rgba(230,57,70,0.15); color: var(--accent); }
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1024px) { .products-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 768px) {
+  .shop-layout { grid-template-columns: 1fr; }
+  .shop-sidebar { position: static; }
+  .products-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) { .products-grid { grid-template-columns: 1fr; } }
